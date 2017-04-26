@@ -16,6 +16,7 @@ angular.module('myApp', [
 .service('CheapFlightService', CheapFlightService)
 .config(($stateProvider) => {
   'ngInject';
+
   $stateProvider
     .state('home', {
       url: '',
