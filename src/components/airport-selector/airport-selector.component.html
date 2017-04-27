@@ -1,0 +1,5 @@
+<select 
+  ng-options="airport as airport.name for airport in airports track by airport.iataCode"
+  ng-model="$ctrl.selectedAirport"
+>
+</select>
