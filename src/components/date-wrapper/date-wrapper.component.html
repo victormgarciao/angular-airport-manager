@@ -6,7 +6,10 @@
   </div>
 
   <div class="control">
-    <date-selector date="$ctrl.startDate">
+    <date-selector 
+      date="$ctrl.startDate"
+      on-change="$ctrl.changeStartDate($event);"
+    >
     </date-selector>
   </div>
 
@@ -16,7 +19,10 @@
     </label>
   </div>
   <div class="control">
-    <date-selector date="$ctrl.endDate">
+    <date-selector 
+      date="$ctrl.endDate"
+      on-change="$ctrl.changeEndDate($event);"
+    >
     </date-selector>
   </div>
 </div>

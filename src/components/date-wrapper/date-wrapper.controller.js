@@ -1,17 +1,23 @@
 import moment from 'moment';
 
-export default function DateWrapperController($scope) {
+export default function DateWrapperController() {
   'ngInject';
 
-  $scope.$watch('$ctrl.startDate', () => {
-    if (moment(this.startDate) > moment(this.endDate)) {
-      this.endDate = moment(this.startDate).add(2, 'd').toDate();
+  this.changeStartDate = (event) => {
+    this.startDate = event.date;
+    console.log('startDate', this.startDate);
+    if (moment(event.date) > moment(this.endDate)) {
+      this.endDate = moment(event.date).add(2, 'd').toDate();
+      console.log('endDate +++', this.endDate);
     }
-  });
+  };
 
-  $scope.$watch('$ctrl.endDate', () => {
-    if (moment(this.endDate) < moment(this.startDate)) {
-      this.startDate = moment(this.endDate).subtract(2, 'd').toDate();
+  this.changeEndDate = (event) => {
+    this.endDate = event.date;
+    console.log('endDate', this.endDate);
+    if (moment(event.date) < moment(this.startDate)) {
+      this.startDate = moment(event.date).subtract(2, 'd').toDate();
+      console.log('startDate +++', this.startDate);
     }
-  });
+  };
 }
