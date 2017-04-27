@@ -1,5 +1,7 @@
 <select 
-  ng-options="airport as airport.name for airport in airports track by airport.iataCode"
+  class="input is-medium"
+  ng-options="airport as airport.name for airport in $ctrl.airports track by airport.iataCode"
   ng-model="$ctrl.selectedAirport"
+  ng-change="$ctrl.updateAirport();"
 >
 </select>
