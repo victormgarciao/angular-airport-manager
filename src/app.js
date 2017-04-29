@@ -2,7 +2,8 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import Components from './components/components';
 import AirportSelectorController from './components/molecules/airport-selector/airport-selector.controller';
-import FlightListSelectorController from './components/organisms/flight-list-selector/flight-list-selector.controller';
+import CheapFlightsManagerController from
+'./components/organisms/cheap-flights-manager/cheap-flights-manager.controller';
 import HomeComponent from './home/home.component';
 import {
   CheapFlightService,
@@ -24,8 +25,8 @@ angular.module('myApp', [
   ['AirportsService', AirportSelectorController]
 )
 .controller(
-  'FlightListSelectorController',
-  ['CheapFlightService', FlightListSelectorController]
+  'CheapFlightsManagerController',
+  ['CheapFlightService', CheapFlightsManagerController]
 )
 .config(($stateProvider) => {
   'ngInject';

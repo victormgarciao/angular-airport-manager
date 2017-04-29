@@ -1,6 +1,6 @@
 import isNil from 'lodash/isNil';
 
-function CheapFlightsManagerController() {
+function CheapFlightsManagerController(CheapFlightService) {
   'ngInject';
 
   const isAvailableToSearch = () => {
@@ -15,8 +15,19 @@ function CheapFlightsManagerController() {
     return false;
   };
 
+  const getFlights = () => {
+    CheapFlightService.getFlightsList().then(
+      (response) => {
+        this.flightList = response;
+        console.log('startDate', this.startDate);
+        console.log('flights', this.flightList);
+      }
+    );
+  }
+
   this.changeOutAirport = (event) => {
     this.outAirport = event.selectedAirport;
+    getFlights();
     console.log('outAirport', this.outAirport);
   };
 
