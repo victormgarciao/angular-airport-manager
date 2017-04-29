@@ -1,4 +1,5 @@
 import isNil from 'lodash/isNil';
+import moment from 'moment';
 
 function CheapFlightsManagerController(CheapFlightService) {
   'ngInject';
@@ -6,9 +7,9 @@ function CheapFlightsManagerController(CheapFlightService) {
   const isAvailableToSearch = () => {
     if (
       !isNil(this.outAirport)
-      && !isNil(this.outAirport)
-      && !isNil(this.outAirport)
-      && !isNil(this.outAirport)
+      && !isNil(this.backAirport)
+      && !isNil(this.startDate)
+      && !isNil(this.endDate)
     ) {
       return true;
     }
@@ -26,7 +27,6 @@ function CheapFlightsManagerController(CheapFlightService) {
 
   this.changeOutAirport = (event) => {
     this.outAirport = event.selectedAirport;
-    getFlights();
     console.log('outAirport', this.outAirport);
   };
 
@@ -52,7 +52,9 @@ function CheapFlightsManagerController(CheapFlightService) {
   };
 
   this.search = () => {
-    console.log('hello world');
+    if (isAvailableToSearch()) {
+      getFlights();
+    }
   };
 }
 
