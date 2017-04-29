@@ -19,11 +19,10 @@ function CheapFlightsManagerController(CheapFlightService) {
     CheapFlightService.getFlightsList().then(
       (response) => {
         this.flightList = response;
-        console.log('startDate', this.startDate);
         console.log('flights', this.flightList);
       }
     );
-  }
+  };
 
   this.changeOutAirport = (event) => {
     this.outAirport = event.selectedAirport;
@@ -50,6 +49,10 @@ function CheapFlightsManagerController(CheapFlightService) {
     if (moment(event.date) < moment(this.startDate)) {
       this.startDate = moment(event.date).subtract(2, 'd').toDate();
     }
+  };
+
+  this.search = () => {
+    console.log('hello world');
   };
 }
 

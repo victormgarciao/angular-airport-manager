@@ -1,6 +1,7 @@
 import angular from 'angular';
 
 import DateSelectorComponent from './atoms/date-selector/date-selector.component';
+import ButtonComponent from './atoms/button/button.component';
 
 import AirportSelectorComponent from './molecules/airport-selector/airport-selector.component';
 
@@ -9,6 +10,7 @@ import CheapFlightsManagerComponent from './organisms/cheap-flights-manager/chea
 
 export default angular.module('app.components', [])
 .component('dateSelector', DateSelectorComponent)
+.component('buttonComponent', ButtonComponent)
 .component('airportSelector', AirportSelectorComponent)
 .component('flightListSelector', FlightListSelectorComponent)
 .component('cheapFlightsManager', CheapFlightsManagerComponent)

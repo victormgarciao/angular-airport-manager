@@ -1,4 +1,6 @@
-export default function DateSelectorController() {
+function DateSelectorController() {
+  'ngInject';
+
   this.updateDate = () => {
     this.onChange({
       $event: {
@@ -7,3 +9,5 @@ export default function DateSelectorController() {
     });
   };
 }
+
+export default DateSelectorController;
