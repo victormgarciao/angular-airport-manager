@@ -4,6 +4,8 @@ import moment from 'moment';
 function CheapFlightsManagerController(CheapFlightService) {
   'ngInject';
 
+  this.isButtonDisabled = true;
+
   const isAvailableToSearch = () => {
     if (
       !isNil(this.outAirport)
@@ -36,16 +38,19 @@ function CheapFlightsManagerController(CheapFlightService) {
 
   this.changeOutAirport = (event) => {
     this.outAirport = event.selectedAirport;
+    this.isButtonDisabled = !isAvailableToSearch();
     console.log('outAirport', this.outAirport);
   };
 
   this.changeBackAirport = (event) => {
     this.backAirport = event.selectedAirport;
+    this.isButtonDisabled = !isAvailableToSearch();
     console.log('backAirport', this.backAirport);
   };
 
   this.changeStartDate = (event) => {
     this.startDate = event.date;
+    this.isButtonDisabled = !isAvailableToSearch();
     console.log('startDate', this.startDate);
     if (moment(event.date) > moment(this.endDate)) {
       this.endDate = moment(event.date).add(2, 'd').toDate();
@@ -54,6 +59,7 @@ function CheapFlightsManagerController(CheapFlightService) {
 
   this.changeEndDate = (event) => {
     this.endDate = event.date;
+    this.isButtonDisabled = !isAvailableToSearch();
     console.log('endDate', this.endDate);
     if (moment(event.date) < moment(this.startDate)) {
       this.startDate = moment(event.date).subtract(2, 'd').toDate();
