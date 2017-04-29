@@ -1,0 +1,25 @@
+<ol>
+  <li ng-repeat="flight in $ctrl.flightList | orderBy: 'price' track by $id(flight)">
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Date</p>
+          <p class="title">{{$ctrl.getDate(flight.dateFrom)}}</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Time</p>
+          <p class="title">{{$ctrl.getTime(flight.dateFrom)}}</p>
+        </div>
+      </div>
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Price</p>
+          <p class="title">{{$ctrl.roundPrice(flight.price)}} {{flight.currency}}</p>
+        </div>
+      </div>
+    </nav>
+  </li>
+</ol>
+

@@ -58,11 +58,16 @@
     </div>
   </div>
 
-  <div class="control is-horizontal">
+  <div class="control">
     <button-component 
       caption="Search"
       on-click="$ctrl.search();"
     >
     </button-component>
+  </div>
+
+  <div class="control">
+    <flight-list flight-list="$ctrl.flightList" >
+    </flight-list>
   </div>
 </div>

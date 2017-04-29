@@ -4,7 +4,6 @@ function AirportSelectorController(AirportsService) {
   AirportsService.getAirportList().then(
     (response) => {
       this.airports = response;
-      this.selectedAirport = this.airports[0];
     }
   );
 
