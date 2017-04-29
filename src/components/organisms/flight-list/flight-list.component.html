@@ -1,5 +1,8 @@
 <ol>
-  <li ng-repeat="flight in $ctrl.flightList | orderBy: 'price' track by $id(flight)">
+  <li 
+    ng-repeat="flight in $ctrl.flightList | orderBy: 'price' track by $id(flight)"
+    ng-if="$ctrl.flightList.length > 0"
+  >
     <nav class="level">
       <div class="level-item has-text-centered">
         <div>
@@ -17,6 +20,16 @@
         <div>
           <p class="heading">Price</p>
           <p class="title">{{$ctrl.roundPrice(flight.price)}} {{flight.currency}}</p>
+        </div>
+      </div>
+    </nav>
+  </li>
+  <li ng-if="$ctrl.flightList.length == 0">
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <div>
+          <p class="heading">Sorry</p>
+          <p class="title">There is no flights for this selection</p>
         </div>
       </div>
     </nav>
