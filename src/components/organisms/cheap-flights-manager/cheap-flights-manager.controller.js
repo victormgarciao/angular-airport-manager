@@ -20,8 +20,8 @@ function CheapFlightsManagerController(CheapFlightService) {
 
   const getFlights = () => {
     const flightData = {
-      startDate: this.startDate,
-      endDate: this.endDate,
+      startDate: formatDate(this.startDate),
+      endDate: formatDate(this.endDate),
       outAirportCode: this.outAirport.iataCode,
       backAirportCode: this.backAirport.iataCode,
     };
@@ -45,22 +45,18 @@ function CheapFlightsManagerController(CheapFlightService) {
   };
 
   this.changeStartDate = (event) => {
-    this.startDate = formatDate(event.date);
+    this.startDate = event.date;
     console.log('startDate', this.startDate);
     if (moment(event.date) > moment(this.endDate)) {
-      this.endDate = formatDate(
-        moment(event.date).add(2, 'd').toDate()
-      );
+      this.endDate = moment(event.date).add(2, 'd').toDate();
     }
   };
 
   this.changeEndDate = (event) => {
-    this.endDate = formatDate(event.date);
+    this.endDate = event.date;
     console.log('endDate', this.endDate);
     if (moment(event.date) < moment(this.startDate)) {
-      this.startDate = formatDate(
-        moment(event.date).subtract(2, 'd').toDate()
-      );
+      this.startDate = moment(event.date).subtract(2, 'd').toDate();
     }
   };
 
