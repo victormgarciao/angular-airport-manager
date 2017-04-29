@@ -1,0 +1,63 @@
+<div>
+  <div class="control is-horizontal">
+    <div class="control-label">
+      <label class="label">
+        Fly out:
+      </label>
+    </div>
+
+    <div class="control">
+      <date-selector 
+        date="$ctrl.startDate"
+        on-change="$ctrl.changeStartDate($event);"
+      >
+      </date-selector>
+    </div>
+
+    <div class="control-label">
+      <label class="label">
+        Fly back:
+      </label>
+    </div>
+    <div class="control">
+      <date-selector 
+        date="$ctrl.endDate"
+        on-change="$ctrl.changeEndDate($event);"
+      >
+      </date-selector>
+    </div>
+  </div>
+  
+  <div class="control is-horizontal">
+    <div class="control-label">
+      <label class="label">
+        Airport out:
+      </label>
+    </div>
+
+    <div class="control">
+      <airport-selector 
+        selectedAirport="$ctrl.outAirport"
+        on-change="$ctrl.changeOutAirport($event);"
+      >
+      </airport-selector>
+    </div>
+
+    <div class="control-label">
+      <label class="label">
+        Airport back:
+      </label>
+    </div>
+
+    <div class="control">
+      <airport-selector 
+        selectedAirport="$ctrl.backAirport"
+        on-change="$ctrl.changeBackAirport($event);"
+      >
+      </airport-selector>
+    </div>
+  </div>
+
+  <flight-list-selector>
+  </flight-list-selector>
+</div>
