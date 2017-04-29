@@ -1,12 +1,15 @@
 import angular from 'angular';
-import DateWrapperComponent from './date-wrapper/date-wrapper.component';
-import DateSelectorComponent from './date-selector/date-selector.component';
-import AirportWrapperComponent from './airport-wrapper/airport-wrapper.component';
-import AirportSelectorComponent from './airport-selector/airport-selector.component';
+
+import DateSelectorComponent from './atoms/date-selector/date-selector.component';
+
+import AirportSelectorComponent from './molecules/airport-selector/airport-selector.component';
+
+import FlightListSelectorComponent from './organisms/flight-list-selector/flight-list-selector.component';
+import CheapFlightsManagerComponent from './organisms/cheap-flights-manager/cheap-flights-manager.component';
 
 export default angular.module('app.components', [])
-.component('dateWrapper', DateWrapperComponent)
 .component('dateSelector', DateSelectorComponent)
-.component('airportWrapper', AirportWrapperComponent)
 .component('airportSelector', AirportSelectorComponent)
+.component('flightListSelector', FlightListSelectorComponent)
+.component('cheapFlightsManager', CheapFlightsManagerComponent)
 .name;
