@@ -1,7 +1,7 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import Components from './components/components';
-import AirportSelectorController from './components/organisms/airport-selector/airport-selector.controller';
+import AirportSelectorController from './components/molecules/airport-selector/airport-selector.controller';
 import FlightListSelectorController from './components/organisms/flight-list-selector/flight-list-selector.controller';
 import HomeComponent from './home/home.component';
 import {

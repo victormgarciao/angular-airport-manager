@@ -1,5 +1,19 @@
+import isNil from 'lodash/isNil';
+
 function CheapFlightsManagerController() {
   'ngInject';
+
+  const isAvailableToSearch = () => {
+    if (
+      !isNil(this.outAirport)
+      && !isNil(this.outAirport)
+      && !isNil(this.outAirport)
+      && !isNil(this.outAirport)
+    ) {
+      return true;
+    }
+    return false;
+  };
 
   this.changeOutAirport = (event) => {
     this.outAirport = event.selectedAirport;
