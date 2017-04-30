@@ -1,30 +1,21 @@
 <div>
   <div class="control is-horizontal">
-    <div class="control-label">
-      <label class="label">
-        Fly out:
-      </label>
-    </div>
-
     <div class="control">
-      <date-selector 
+      <flight-date-selector 
         date="$ctrl.startDate"
         on-change="$ctrl.changeStartDate($event);"
+        label="Fly out:"
       >
-      </date-selector>
+      </flight-date-selector>
     </div>
 
-    <div class="control-label">
-      <label class="label">
-        Fly back:
-      </label>
-    </div>
     <div class="control">
-      <date-selector 
+      <flight-date-selector 
         date="$ctrl.endDate"
         on-change="$ctrl.changeEndDate($event);"
+        label="Fly back:"
       >
-      </date-selector>
+      </flight-date-selector>
     </div>
   </div>
   
