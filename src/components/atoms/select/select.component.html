@@ -1,4 +1,7 @@
-<span class="select selectComponent">
+<span 
+  class="select"
+  ng-style="{{$ctrl.styles}}"
+>
   <select 
     class="input"
     ng-options="element as element.name for element in $ctrl.options"

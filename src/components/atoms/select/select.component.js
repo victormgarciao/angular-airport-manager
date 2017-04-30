@@ -1,6 +1,5 @@
 import template from './select.component.html';
 import controller from './select.controller';
-import './select.component.scss';
 
 const SelectComponent = {
   bindings: {
