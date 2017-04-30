@@ -29,30 +29,20 @@
   </div>
   
   <div class="control is-horizontal">
-    <div class="control-label">
-      <label class="label">
-        Airport out:
-      </label>
-    </div>
-
     <div class="control">
       <airport-selector 
         selectedAirport="$ctrl.outAirport"
         on-change="$ctrl.changeOutAirport($event);"
+        label="Airport out:"
       >
       </airport-selector>
-    </div>
-
-    <div class="control-label">
-      <label class="label">
-        Airport back:
-      </label>
     </div>
 
     <div class="control">
       <airport-selector 
         selectedAirport="$ctrl.backAirport"
         on-change="$ctrl.changeBackAirport($event);"
+        label="Airport back:"
       >
       </airport-selector>
     </div>

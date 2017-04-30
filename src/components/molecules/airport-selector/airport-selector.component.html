@@ -1,8 +1,20 @@
-<select-component
-  ng-model="$ctrl.selectedAirport"
-  on-change="$ctrl.changeAirport($event)"
-  model="$ctrl.selectedAirport"
-  options="$ctrl.airports"
-  default-option="Select..."
->
-</select-component>
+<div class="control is-horizontal">
+  <div class="is-one-quarter">
+    <div class="control-label">
+      <label class="label">
+        {{$ctrl.label}}
+      </label>
+    </div>
+  </div>
+
+  <div class="control">
+    <select-component
+      ng-model="$ctrl.selectedAirport"
+      on-change="$ctrl.changeAirport($event)"
+      model="$ctrl.selectedAirport"
+      options="$ctrl.airports"
+      default-option="Select..."
+    >
+    </select-component>
+  </div>
+</div>
