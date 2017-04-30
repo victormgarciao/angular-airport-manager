@@ -5,6 +5,7 @@ function CheapFlightsManagerController(CheapFlightService) {
   'ngInject';
 
   this.isButtonDisabled = true;
+  this.buttonLoadingClass = '';
 
   const isAvailableToSearch = () => {
     if (
@@ -21,6 +22,7 @@ function CheapFlightsManagerController(CheapFlightService) {
   const formatDate = date => moment(date).format('YYYY-MM-DD');
 
   const getFlights = () => {
+    this.buttonLoadingClass = 'is-loading';
     const flightData = {
       startDate: formatDate(this.startDate),
       endDate: formatDate(this.endDate),
@@ -31,6 +33,7 @@ function CheapFlightsManagerController(CheapFlightService) {
     CheapFlightService.getFlightsList(flightData).then(
       (response) => {
         this.flightList = response;
+        this.buttonLoadingClass = '';
         console.log('flights', this.flightList);
       }
     );

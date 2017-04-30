@@ -44,12 +44,16 @@
   </div>
 
   <div class="control">
-    <button-component 
-      caption="Search"
-      on-click="$ctrl.search();"
-      is-disabled="$ctrl.isButtonDisabled"
-    >
-    </button-component>
+    <div class="column">
+      <button-component
+        class="column"
+        classes="is-large {{$ctrl.buttonLoadingClass}}"
+        caption="Search"
+        on-click="$ctrl.search();"
+        is-disabled="$ctrl.isButtonDisabled"
+      >
+      </button-component>
+    </div>
   </div>
 
   <div class="control">

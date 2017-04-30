@@ -4,6 +4,7 @@ import controller from './button.controller';
 const ButtonComponent = {
   bindings: {
     caption: '@',
+    classes: '@',
     isDisabled: '<',
     onClick: '&'
   },
