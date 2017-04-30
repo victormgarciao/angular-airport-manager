@@ -4,7 +4,6 @@ import controller from './airport-selector.controller';
 const AirportSelectorComponent = {
   bindings: {
     airports: '<',
-    selectedAirport: '<',
     onChange: '&'
   },
   template,

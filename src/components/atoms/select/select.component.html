@@ -1,0 +1,10 @@
+<span class="select">
+  <select 
+    class="input"
+    ng-options="element as element.name for element in $ctrl.options"
+    ng-model="$ctrl.model"
+    ng-change="$ctrl.changeValue();"
+  >
+  <option value="">{{$ctrl.defaultOption}}</option>
+  </select>
+</span>

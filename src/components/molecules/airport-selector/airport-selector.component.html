@@ -1,10 +1,8 @@
-<span class="select">
-  <select 
-    class="input"
-    ng-options="airport as airport.name for airport in $ctrl.airports track by airport.iataCode"
-    ng-model="$ctrl.selectedAirport"
-    ng-change="$ctrl.updateAirport();"
-  >
-  <option value="">Select...</option>
-  </select>
-</span>
+<select-component
+  ng-model="$ctrl.selectedAirport"
+  on-change="$ctrl.changeAirport($event)"
+  model="$ctrl.selectedAirport"
+  options="$ctrl.airports"
+  default-option="Select..."
+>
+</select-component>

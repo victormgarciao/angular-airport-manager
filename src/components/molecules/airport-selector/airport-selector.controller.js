@@ -7,12 +7,17 @@ function AirportSelectorController(AirportsService) {
     }
   );
 
-  this.updateAirport = () => {
+  const updateAirport = () => {
     this.onChange({
       $event: {
         selectedAirport: this.selectedAirport
       }
     });
+  };
+
+  this.changeAirport = (event) => {
+    this.selectedAirport = event.selectedOption;
+    updateAirport();
   };
 }
 
