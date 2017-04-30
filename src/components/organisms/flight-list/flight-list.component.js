@@ -1,7 +1,7 @@
 import template from './flight-list.component.html';
 import controller from './flight-list.controller';
 
-const FlightListSelectorComponent = {
+const FlightListComponent = {
   bindings: {
     flightList: '<',
   },
@@ -9,5 +9,5 @@ const FlightListSelectorComponent = {
   controller
 };
 
-export default FlightListSelectorComponent;
+export default FlightListComponent;
 

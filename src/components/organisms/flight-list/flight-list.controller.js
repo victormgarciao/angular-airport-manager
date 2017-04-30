@@ -1,7 +1,7 @@
 import moment from 'moment';
 import round from 'lodash/round';
 
-function FlightListSelectorController() {
+function FlightListController() {
   'ngInject';
 
   this.getDate = date => moment(date).format('DD/MM/YYYY');
@@ -9,4 +9,4 @@ function FlightListSelectorController() {
   this.roundPrice = price => round(price);
 }
 
-export default FlightListSelectorController;
+export default FlightListController;
