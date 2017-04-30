@@ -1,7 +1,8 @@
 <div>
   <div class="control is-horizontal">
     <div class="control">
-      <flight-date-selector 
+      <flight-date-selector
+        class="column"
         date="$ctrl.startDate"
         on-change="$ctrl.changeStartDate($event);"
         label="Fly out:"
@@ -11,6 +12,7 @@
 
     <div class="control">
       <flight-date-selector 
+        class="column"
         date="$ctrl.endDate"
         on-change="$ctrl.changeEndDate($event);"
         label="Fly back:"
@@ -22,6 +24,7 @@
   <div class="control is-horizontal">
     <div class="control">
       <airport-selector 
+        class="column"
         selectedAirport="$ctrl.outAirport"
         on-change="$ctrl.changeOutAirport($event);"
         label="Airport out:"
@@ -31,6 +34,7 @@
 
     <div class="control">
       <airport-selector 
+        class="column"
         selectedAirport="$ctrl.backAirport"
         on-change="$ctrl.changeBackAirport($event);"
         label="Airport back:"

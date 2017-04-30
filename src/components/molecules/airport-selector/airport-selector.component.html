@@ -1,17 +1,16 @@
-<div class="control is-horizontal">
-  <div class="is-one-quarter">
-    <label-component label="{{$ctrl.label}}">
-    </label-component>
-  </div>
+<div>
+  <label-component label="{{$ctrl.label}}">
+  </label-component>
+</div>
 
-  <div class="control">
-    <select-component
-      ng-model="$ctrl.selectedAirport"
-      on-change="$ctrl.changeAirport($event)"
-      model="$ctrl.selectedAirport"
-      options="$ctrl.airports"
-      default-option="Select..."
-    >
-    </select-component>
-  </div>
+<div class="control">
+  <select-component
+    class="column"
+    ng-model="$ctrl.selectedAirport"
+    on-change="$ctrl.changeAirport($event)"
+    model="$ctrl.selectedAirport"
+    options="$ctrl.airports"
+    default-option="Select..."
+  >
+  </select-component>
 </div>

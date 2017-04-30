@@ -1,15 +1,13 @@
-<div class="control is-horizontal">
-  <div class="is-one-quarter">
-    <label-component label="{{$ctrl.label}}">
-    </label-component>
-  </div>
+<div>
+  <label-component label="{{$ctrl.label}}">
+  </label-component>
+</div>
 
-  <div class="control">
-    <date-selector 
-      date="$ctrl.date"
-      on-change="$ctrl.changeStartDate($event);"
-      ng-model="$ctrl.date"
-    >
-    </date-selector>
-  </div>
+<div class="control">
+  <date-selector 
+    date="$ctrl.date"
+    on-change="$ctrl.changeStartDate($event);"
+    ng-model="$ctrl.date"
+  >
+  </date-selector>
 </div>
