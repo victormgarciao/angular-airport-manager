@@ -4,6 +4,12 @@ import moment from 'moment';
 function CheapFlightsManagerController(CheapFlightService) {
   'ngInject';
 
+  this.styles = {
+    backgroundImage: 'linear-gradient(to top,#1e8adf,#2994e6)',
+    border: '2px solid #1177ca',
+    borderRadius: '0 0 5px 5px',
+  };
+
   this.isButtonDisabled = true;
   this.buttonLoadingClass = '';
 
