@@ -1,0 +1,13 @@
+.flightList {
+  list-style-type: none;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+
+  .flightListElement {
+    &:hover{
+      background-color: #eee;
+    }
+  }
+}
+
