@@ -1,5 +1,5 @@
 const CheapFlightService = ($http) => {
-  const getFlightsList = (flightData) => (
+  const getFlightsList = flightData => (
     $http.get(
       `https://murmuring-ocean-10826.herokuapp.com/en/api/2/flights/from/${flightData.outAirportCode}/to/${flightData.backAirportCode}/${flightData.startDate}/${flightData.endDate}/250/unique/?limit=15&offset-0`
     )
