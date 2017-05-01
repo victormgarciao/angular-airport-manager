@@ -1,12 +1,11 @@
 import template from './header.component.html';
-import controller from './header.controller';
+import './header.component.scss';
 
 const HeaderComponent = {
   bindings: {
     caption: '@',
   },
   template,
-  controller
 };
 
 export default HeaderComponent;
