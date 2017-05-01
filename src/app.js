@@ -38,13 +38,11 @@ angular.module('myApp', [
     })
       .state('home.cheapFlightList', {
         url: '/cheapFlightList',
-        templateUrl: './components/organisms/flight-list/flight-list.component.html',
-        controllerUrl: './components/organisms/flight-list/flight-list.controller.js'
+        templateUrl: './components/organisms/flight-list/flight-list.component.html'
       })
       .state('home.selectedFlight', {
         url: '/selectedFlight',
-        templateUrl: './components/molecules/flight-selected/flight-selected.component.html',
-        // controllerUrl: './components/organisms/flight-list/flight-list.controller.js'
+        templateUrl: './components/molecules/flight-selected/flight-selected.component.html'
       })
   ;
 });

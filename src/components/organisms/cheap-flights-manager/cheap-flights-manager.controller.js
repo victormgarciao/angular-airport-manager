@@ -6,12 +6,6 @@ import moment from 'moment';
 function CheapFlightsManagerController(CheapFlightService) {
   'ngInject';
 
-  this.date = '01/12/1981';
-  this.time = '04:35';
-  this.price = '72';
-  this.currency = '€';
-
-
   this.isButtonDisabled = true;
   this.buttonLoadingClass = '';
 
@@ -88,6 +82,13 @@ function CheapFlightsManagerController(CheapFlightService) {
     if (isAvailableToSearch()) {
       searchFlights();
     }
+  };
+
+  this.getFlightSelected = (event) => {
+    this.date = event.date;
+    this.time = event.time;
+    this.price = event.price;
+    this.currency = event.currency;
   };
 }
 
