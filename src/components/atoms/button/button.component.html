@@ -1,10 +1,8 @@
-<div class="block tupi">
-  <a 
-    class="styledButton button {{$ctrl.classes}} is-primary"
-    ng-click="$ctrl.handleClick();"
-    ng-disabled="$ctrl.isDisabled"
-    ng-style="{{$ctrl.styles}}"
-  >
-    <span>{{$ctrl.caption}}</span>
-  </a>
-</div>
+<button
+  class="button {{$ctrl.classes}} is-primary"
+  ng-click="$ctrl.handleClick();"
+  ng-disabled="$ctrl.isDisabled"
+  id="buttonComponent"
+>
+    {{$ctrl.caption}}
+</button>

@@ -1,7 +1,9 @@
-<ol>
+<ol ng-style="{{$ctrl.styles.ol}}">
   <li
     ng-repeat="flight in $ctrl.flightList | orderBy: 'price' track by $id(flight)"
     ng-if="$ctrl.flightList.length > 0"
+    ng-style="{{$ctrl.styles.li}}"
+    ng-class="{'lastFlightListItem':$last}"
   >
     <flight-list-item
       date="{{$ctrl.getDate(flight.dateFrom)}}"
@@ -11,7 +13,10 @@
     >
     </flight-list-item>
   </li>
-  <li ng-if="$ctrl.flightList.length == 0">
+  <li 
+    ng-if="$ctrl.flightList.length == 0"
+    ng-style="{{$ctrl.styles.li}}"
+  >
     <flight-list-empty-item>
     </flight-list-empty-item>
   </li>

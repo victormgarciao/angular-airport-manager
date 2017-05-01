@@ -1,0 +1,13 @@
+#flightListItemNav {
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+
+  &:last-of-type {
+    border: 1px solid transparent;
+    border-radius: 0 0 5px 5px;
+    background: yellow;
+  }
+
+
+}
