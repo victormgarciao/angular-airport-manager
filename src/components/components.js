@@ -10,6 +10,7 @@ import AirportSelector from './molecules/airport-selector/airport-selector.compo
 import FlightListItem from './molecules/flight-list-item/flight-list-item.component';
 import FlightListEmptyItem from './molecules/flight-list-empty-item/flight-list-empty-item.component';
 import FlightDateSelector from './molecules/flight-date-selector/flight-date-selector.component';
+import FlightSelected from './molecules/flight-selected/flight-selected.component';
 import Header from './molecules/header/header.component';
 
 import FlightList from './organisms/flight-list/flight-list.component';
@@ -26,6 +27,7 @@ export default angular.module('app.components', [])
 .component('flightListItem', FlightListItem)
 .component('flightListEmptyItem', FlightListEmptyItem)
 .component('flightDateSelector', FlightDateSelector)
+.component('flightSelected', FlightSelected)
 .component('headerComponent', Header)
 
 .component('flightList', FlightList)

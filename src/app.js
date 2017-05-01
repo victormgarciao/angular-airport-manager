@@ -41,5 +41,10 @@ angular.module('myApp', [
         templateUrl: './components/organisms/flight-list/flight-list.component.html',
         controllerUrl: './components/organisms/flight-list/flight-list.controller.js'
       })
+      .state('home.selectedFlight', {
+        url: '/selectedFlight',
+        templateUrl: './components/molecules/flight-selected/flight-selected.component.html',
+        // controllerUrl: './components/organisms/flight-list/flight-list.controller.js'
+      })
   ;
 });

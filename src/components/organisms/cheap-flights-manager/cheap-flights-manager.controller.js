@@ -6,6 +6,12 @@ import moment from 'moment';
 function CheapFlightsManagerController(CheapFlightService) {
   'ngInject';
 
+  this.date = '01/12/1981';
+  this.time = '04:35';
+  this.price = '72';
+  this.currency = '€';
+
+
   this.isButtonDisabled = true;
   this.buttonLoadingClass = '';
 
