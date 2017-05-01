@@ -6,6 +6,7 @@ const ButtonComponent = {
   bindings: {
     caption: '@',
     classes: '@',
+    sref: '@',
     isDisabled: '<',
     onClick: '&'
   },
