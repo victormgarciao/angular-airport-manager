@@ -34,6 +34,12 @@ angular.module('myApp', [
   $stateProvider
     .state('home', {
       url: '',
-      template: '<home-page></home-page>'
-    });
+      templateUrl: './home/home.component.html'
+    })
+      .state('home.cheapFlightList', {
+        url: '/cheapFlightList',
+        templateUrl: './components/organisms/flight-list/flight-list.component.html',
+        controllerUrl: './components/organisms/flight-list/flight-list.controller.js'
+      })
+  ;
 });

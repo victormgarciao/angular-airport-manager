@@ -3,12 +3,11 @@
     ng-repeat="flight in $ctrl.flightList | orderBy: 'price' track by $id(flight)"
     ng-if="$ctrl.flightList.length > 0"
     class="flightListElement"
-    ng-class="{'lastFlightListItem':$last}"
   >
     <flight-list-item
-      date="{{$ctrl.getDate(flight.dateFrom)}}"
-      time="{{$ctrl.getTime(flight.dateFrom)}}"
-      price="{{$ctrl.roundPrice(flight.price)}}"
+      date="{{flight.date}}"
+      time="{{flight.time}}"
+      price="{{flight.price}}"
       currency="{{flight.currency}}"
     >
     </flight-list-item>

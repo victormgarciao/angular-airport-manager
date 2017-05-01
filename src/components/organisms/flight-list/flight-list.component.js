@@ -1,5 +1,4 @@
 import template from './flight-list.component.html';
-import controller from './flight-list.controller';
 import './flight-list.component.scss';
 
 const FlightListComponent = {
@@ -7,7 +6,6 @@ const FlightListComponent = {
     flightList: '<',
   },
   template,
-  controller
 };
 
 export default FlightListComponent;
