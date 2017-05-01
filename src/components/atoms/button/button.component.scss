@@ -29,4 +29,12 @@ $buttonTransition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-
     @include setBackgroundAndBorderColor($normalButtonColor);
     opacity: .5;
   }
+
+  &.is-loading {
+    &:after {
+      border: 2px solid $buttonTextColor;
+      border-right-color: transparent;
+      border-top-color: transparent;
+    }
+  }
 }
