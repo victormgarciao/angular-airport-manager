@@ -1,26 +1,32 @@
 $normalButtonColor: #ebbd10;
 $hoverButtonColor: #f1c933;
+$disabledButtonColor: #edd378;
+$buttonTextColor: #073590;
 
-$buttonBackground: $normalButtonColor;
-$buttonBorder: $normalButtonColor;
-$buttonText: #073590;
 $buttonFontWeight: 600;
-$buttonTransition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+$buttonTransition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 
-$hoverButtonBackground: $hoverButtonColor;
-$hoverButtonBorder: $hoverButtonColor;
+@mixin setBackgroundAndBorderColor($color) {
+  background-color: $color;
+  border-color: $color;
+}
 
-#buttonComponent {
-  background-color: $buttonBackground;
-  color: $buttonText;
-  border-color: $buttonBorder;
+.button {
+  @include setBackgroundAndBorderColor($normalButtonColor);
+  color: $buttonTextColor;
   font-weight: $buttonFontWeight;
   transition: $buttonTransition;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $hoverButtonBackground;
-    border-color: $hoverButtonBorder;
+    @include setBackgroundAndBorderColor($hoverButtonColor);
+    color: $buttonTextColor;
+  }
+
+  &.is-disabled,
+  &[disabled] {
+    @include setBackgroundAndBorderColor($normalButtonColor);
+    opacity: .5;
   }
 }
