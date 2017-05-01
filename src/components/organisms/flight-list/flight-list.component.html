@@ -13,10 +13,7 @@
     >
     </flight-list-item>
   </li>
-  <li 
-    ng-if="$ctrl.flightList.length == 0"
-    ng-style="{{$ctrl.styles.li}}"
-  >
+  <li ng-if="$ctrl.flightList.length == 0">
     <flight-list-empty-item>
     </flight-list-empty-item>
   </li>
